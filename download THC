@@ -1,0 +1,521 @@
+import React from "react";
+
+function DownloadTHC() {
+
+  const data = {
+    invoiceNo: "MUN/24-25/04310",
+    name: "AAR BEE FREIGHT FORWARDERS PRIVATE LIMITED",
+    addressLine1: "EIGHT FLOOR, 804, SAHYOG BUILDING, 58",
+    addressLine2: "NEHRU PLACE, NEW DELHI, South",
+    addressLine3: "Delhi, Delhi, 110019",
+    state: "NEW DELHI",
+    stateCode: "07",
+    gstin: "07AAACA6150C1Z9",
+    pan: "AAACA6150C",
+    placeOfSupply: "NEW DELHI",
+    invoiceDate: "03-03-2025",
+    billNo: "JSLMUNCMB233199",
+    pol: "MUNDRA, IN",
+    pod: "COLOMBO, LK",
+    vessel: "BLPL TRUST / 1502E",
+    freightTerms: "FREIGHT PREPAID",
+    conts: "01X20' GP",
+    line: "JSL",
+  };
+  
+
+  const invoiceItems = [
+    {
+      description: "Terminal Handling Charges (Export)",
+      acctCode: "996711",
+      unit: 1,
+      rate: 16000.00,
+      exRate: 1.00,
+      total: 16000.00
+    },
+    {
+      description: "Seal Charges (Export)",
+      acctCode: "996711",
+      unit: 1,
+      rate: 100.00,
+      exRate: 89.94,
+      total: 8994.00
+    },
+    {
+      description: "Bill of Lading Fees",
+      acctCode: "998134",
+      unit: 1,
+      rate: 50.00,
+      exRate: 89.94,
+      total: 4497.00
+    },
+    {
+      description: "Port Handling",
+      acctCode: "996511",
+      unit: 1,
+      rate: 250.00,
+      exRate: 89.94,
+      total: 22485.00
+    },
+    {
+      description: "Custom Clearance",
+      acctCode: "998542",
+      unit: 1,
+      rate: 300.00,
+      exRate: 89.94,
+      total: 26982.00
+    },
+    {
+      description: "Seal Charges",
+      acctCode: "998134",
+      unit: 1,
+      rate: 20.00,
+      exRate: 89.94,
+      total: 1798.80
+    },
+    {
+      description: "Lift On/Lift Off",
+      acctCode: "996522",
+      unit: 1,
+      rate: 120.00,
+      exRate: 89.94,
+      total: 10792.80
+    },
+    {
+      description: "Handling Fee",
+      acctCode: "998112",
+      unit: 1,
+      rate: 180.00,
+      exRate: 89.94,
+      total: 16189.20
+    },
+    {
+      description: "Shipping Bill Filing",
+      acctCode: "998541",
+      unit: 1,
+      rate: 90.00,
+      exRate: 89.94,
+      total: 8094.60
+    },
+    {
+      description: "Service Charges",
+      acctCode: "998721",
+      unit: 1,
+      rate: 70.00,
+      exRate: 89.94,
+      total: 6295.80
+    }
+  ];
+
+  const gstData = [
+    {
+      srNo: 1,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 2,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 3,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 4,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 5,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 6,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 7,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 8,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 9,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+    {
+      srNo: 10,
+      discount: "",
+      taxableValue: 35976.00,
+      cgstRate: 2.5,
+      cgstAmt: 0.00,
+      sgstRate: 2.5,
+      sgstAmt: 0.00,
+      igstRate: 5.0,
+      igstAmt: 1798.80,
+    },
+  ];
+
+  const totalTaxable = gstData.reduce((sum, item) => sum + item.taxableValue, 0);
+const totalCGST = gstData.reduce((sum, item) => sum + item.cgstAmt, 0);
+const totalSGST = gstData.reduce((sum, item) => sum + item.sgstAmt, 0);
+const totalIGST = gstData.reduce((sum, item) => sum + item.igstAmt, 0);
+const totalAmount = totalTaxable + totalCGST + totalSGST + totalIGST;
+
+const convertToWords = (amount) => {
+  const a = [
+    '', 'ONE', 'TWO', 'THREE', 'FOUR', 'FIVE', 'SIX',
+    'SEVEN', 'EIGHT', 'NINE', 'TEN', 'ELEVEN', 'TWELVE',
+    'THIRTEEN', 'FOURTEEN', 'FIFTEEN', 'SIXTEEN', 'SEVENTEEN',
+    'EIGHTEEN', 'NINETEEN'
+  ];
+  
+  const b = ['', '', 'TWENTY', 'THIRTY', 'FORTY', 'FIFTY', 'SIXTY', 'SEVENTY', 'EIGHTY', 'NINETY'];
+
+  const numToWords = (num) => {
+    if (num < 20) return a[num];
+    if (num < 100) return b[Math.floor(num / 10)] + (num % 10 ? ' ' + a[num % 10] : '');
+    if (num < 1000) return a[Math.floor(num / 100)] + ' HUNDRED' + (num % 100 ? ' ' + numToWords(num % 100) : '');
+    if (num < 100000) return numToWords(Math.floor(num / 1000)) + ' THOUSAND' + (num % 1000 ? ' ' + numToWords(num % 1000) : '');
+    if (num < 10000000) return numToWords(Math.floor(num / 100000)) + ' LAKH' + (num % 100000 ? ' ' + numToWords(num % 100000) : '');
+    return numToWords(Math.floor(num / 10000000)) + ' CRORE' + (num % 10000000 ? ' ' + numToWords(num % 10000000) : '');
+  };
+
+  return 'RUPEES ' + numToWords(Math.floor(amount));
+};
+  
+  return (
+    <div className="bg-gray-100 ">
+      <div className="w-[700] min-h-[842px] max-h-[842px] bg-white mx-auto text-green-900 flex flex-col justify-between">
+
+<div>
+    <div>
+    <div className="flex items-center justify-between p-4">
+  {/* Logo and Tagline */}
+  <div className="flex items-center space-x-2">
+    <img
+      src="https://raw.githubusercontent.com/musthafa-pk/publicassets/refs/heads/main/logo.jpg" // Replace with your logo path
+      alt="Jodac Logo"
+      className="h-20 w-auto"
+    />
+  </div>
+
+  {/* Company Name */}
+  <div className="text-right">
+    <h1 className="text-md font-semibold text-gray-900 leading-tight">
+      JODAC SHIPPING LINE PRIVATE LIMITED
+    </h1>
+    <p className="text-sm text-gray-600">(NVOCC Container Line)</p>
+  </div>
+</div>
+
+<div className="flex items-center justify-between pl-4 pr-4">
+<div className="border border-black text-sm p-3">
+  <div className="grid grid-cols-2 gap-8">
+    {/* Left Column */}
+    <div className="space-y-1">
+      <div className="flex justify-between gap-2">
+        <span className="font-semibold">INVOICE NO</span>
+        <span>{data.invoiceNo}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">Name</span>
+        <span>{data.name}</span>
+      </div>
+      <div className="flex flex-col">
+        <span className="font-semibold">Address</span>
+        <span>{data.addressLine1}</span>
+        <span>{data.addressLine2}</span>
+        <span>{data.addressLine3}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">State</span>
+        <span>{data.state}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">State Code</span>
+        <span>{data.stateCode}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">GSTIN/UNIQUE ID</span>
+        <span>{data.gstin}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">Pan</span>
+        <span>{data.pan}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">PLACE OF SUPPLY</span>
+        <span>{data.placeOfSupply}</span>
+      </div>
+    </div>
+
+    {/* Right Column */}
+    <div className="space-y-1">
+      <div className="flex justify-between gap-2">
+        <span className="font-semibold">INVOICE DATE</span>
+        <span>{data.invoiceDate}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">BILL NO</span>
+        <span>{data.billNo}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">POL</span>
+        <span>{data.pol}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">POD</span>
+        <span>{data.pod}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">VESSEL</span>
+        <span>{data.vessel}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">FREIGHT TERMS</span>
+        <span>{data.freightTerms}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">CONTS</span>
+        <span>{data.conts}</span>
+      </div>
+      <div className="flex justify-between gap-4">
+        <span className="font-semibold">LINE</span>
+        <span>{data.line}</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div className="flex items-center justify-between pl-4 pr-4">
+<div className="border border-black border-t-0 max-w-5xl mx-auto text-sm">
+ {/* Table */}
+ <div className="border-b border-black">
+ <table className="w-full text-sm text-center border-black border-collapse">
+  <thead className="border-b border-black">
+    <tr>
+      <th className="border-r border-black p-1">SR. NO</th>
+      <th className="border-r border-black p-1">DESCRIPTION</th>
+      <th className="border-r border-black p-1">ACCT. CODE</th>
+      <th className="border-r border-black p-1">UNIT</th>
+      <th className="border-r border-black p-1">RATE</th>
+      <th className="border-r border-black p-1">EX. RATE</th>
+      <th className="p-1">TOTAL</th>
+    </tr>
+  </thead>
+  <tbody>
+    {invoiceItems.map((item, index) => (
+      <tr key={index} className="border-b border-black">
+        <td className="border-r border-black p-1">{index + 1}</td>
+        <td className="border-r border-black p-1 text-left">{item.description}</td>
+        <td className="border-r border-black p-1">{item.acctCode}</td>
+        <td className="border-r border-black p-1">{item.unit}</td>
+        <td className="border-r border-black p-1">{item.rate.toFixed(2)}</td>
+        <td className="border-r border-black p-1">{item.exRate.toFixed(2)}</td>
+        <td className="p-1">{item.total.toFixed(2)}</td>
+      </tr>
+    ))}
+  </tbody>
+</table>
+
+  </div>
+
+  {/* GST Section */}
+  <div className="mt-6 border-t border-b border-black">
+  <table className="w-full text-center table-auto border-collapse">
+    <thead className="border-b border-black">
+      <tr>
+        <th className="border-r border-black p-1"></th>
+        <th className="border-r border-black p-1"></th>
+        <th className="border-r border-black p-1"></th>
+        <th colSpan="2" className="border-r border-b border-black p-1">CGST</th>
+        <th colSpan="2" className="border-r border-b border-black p-1">SGST</th>
+        <th colSpan="2" className="p-1 border-b">IGST</th>
+      </tr>
+      <tr>
+        <th className="border-r border-black p-1">SR. NO</th>
+        <th className="border-r border-black p-1">Discount</th>
+        <th className="border-r border-black p-1">TAXABLE VALUE</th>
+        <th className="border-r border-black p-1">Rate</th>
+        <th className="border-r border-black p-1">AMT</th>
+        <th className="border-r border-black p-1">Rate</th>
+        <th className="border-r border-black p-1">AMT</th>
+        <th className="border-r border-black p-1">Rate</th>
+        <th className="p-1">AMT</th>
+      </tr>
+    </thead>
+    <tbody>
+      {gstData.map((item, index) => (
+        <tr key={index} className="border-b">
+          <td className="border-r border-black p-1">{item.srNo}</td>
+          <td className="border-r border-black p-1">{item.discount}</td>
+          <td className="border-r border-black p-1">{item.taxableValue.toFixed(2)}</td>
+          <td className="border-r border-black p-1">{item.cgstRate.toFixed(2)}%</td>
+          <td className="border-r border-black p-1">{item.cgstAmt.toFixed(2)}</td>
+          <td className="border-r border-black p-1">{item.sgstRate.toFixed(2)}%</td>
+          <td className="border-r border-black p-1">{item.sgstAmt.toFixed(2)}</td>
+          <td className="border-r border-black p-1">{item.igstRate.toFixed(2)}%</td>
+          <td className="p-1">{item.igstAmt.toFixed(2)}</td>
+        </tr>
+      ))}
+      <tr>
+        <td colSpan="2" className="border-r border-black font-semibold p-1 text-left">Total</td>
+        <td className="border-r border-black p-1">{totalTaxable.toFixed(2)}</td>
+        <td className="border-r border-black p-1"></td>
+        <td className="border-r border-black p-1">{totalCGST.toFixed(2)}</td>
+        <td className="border-r border-black p-1"></td>
+        <td className="border-r border-black p-1">{totalSGST.toFixed(2)}</td>
+        <td className="border-r border-black p-1"></td>
+        <td className="p-1">{totalIGST.toFixed(2)}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+{/* <!-- Total Value --> */}
+<div className="border-black border-t-0 border-b text-sm">
+  <div className="flex justify-between border-b border-black">
+    <div className="p-2 font-semibold">TOTAL VALUE (IN FIGURE):</div>
+    <div className="p-2">{totalAmount.toLocaleString(undefined, { minimumFractionDigits: 2 })}</div>
+  </div>
+  <div className="flex justify-between">
+    <div className="p-2 font-semibold border-r">TOTAL VALUE (IN WORDS):</div>
+    <div className="p-2 uppercase">
+      {convertToWords(totalAmount)} ONLY
+    </div>
+  </div>
+</div>
+
+
+{/* <!-- Reverse Charge & Bank Info --> */}
+<div className="flex justify-between border-black border-t-0 text-sm px-4 py-2">
+  <div>
+    <p className="font-semibold">Amount of Tax Subject To Reverse Charge:</p>
+    <p><span className="inline-block w-24">CIN NO</span>: U63030GJ2023PTC138503</p>
+    <p><span className="inline-block w-24">PAN NO</span>: AAFCJ8961K</p>
+    <p><span className="inline-block w-24">GSTIN</span>: 24AAFCJ8961K1Z3</p>
+    <p><span className="inline-block w-24">TAN NO</span>: RKTJ06113C</p>
+  </div>
+  <div>
+    <p className="font-semibold underline">Banking Details:</p>
+    <p><span className="inline-block w-28">Bank Name</span>: <span className="font-semibold">ICICI BANK LTD</span></p>
+    <p><span className="inline-block w-28">Account No</span>: <span className="font-semibold">025905504168</span></p>
+    <p><span className="inline-block w-28">IFSC CODE</span>: <span className="font-semibold">ICIC0000259</span></p>
+    <p><span className="inline-block w-28">Branch Name</span>: <span className="font-semibold">GANDHIDHAM</span></p>
+  </div>
+</div>
+
+{/* <!-- Signature & Note --> */}
+<div className="border-b text-sm p-4">
+  <p className="text-right text-xs italic mb-1">
+    Pls transfer/ issue Cheque/ DD in favor of <strong>JODAC SHIPPING LINE PVT LTD</strong>
+  </p>
+  <div className="text-right">
+    <div className="text-sm">
+    <div className="flex items-center justify-end text-end">
+    <p className="font-semibold">THANK YOU</p>
+    <p className="pl-1 text-xs">for being a valued Customer</p>
+    </div>
+      
+      <p className="text-xs">For JODAC Shipping Line Pvt Ltd</p>
+    </div>
+    <p className="mt-6 text-xs">Authorized Signatory</p>
+  </div>
+</div>
+
+{/* <!-- Footer --> */}
+<div className="border-t mt-1  border-t text-center text-sm pt-4">
+  <p className="font-semibold">
+    Office Address: Ratnakar Arcade, Office No 15, Plot No 62, Sector 8,<br />
+    Gandhidham, Kutch, Gujarat 370 201 (India)
+  </p>
+</div>
+
+  
+</div>
+
+</div>
+    </div>
+
+       
+</div>
+
+<div>
+    <img src="/footer.png" alt="" />
+</div>
+
+      </div>
+    </div>
+  );
+}
+
+export default DownloadTHC;  
+
